@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<title>Paxton - HTML 5 Template Preview</title>
+
+<!-- Stylesheets -->
+<link href="{% static 'web/css/style.css' %}" rel="stylesheet">
+<link href="{% static 'web/css/responsive.css' %}" rel="stylesheet">
+<link rel="icon" href="{% static 'web/images/favicon.ico" type="image/x-icon">
+
+</head>
+
+<!-- page wrapper -->
+<body class="boxed_wrapper">
+
+
+    <!-- .preloader -->
+    <!-- <div class="preloader"></div> -->
+    <!-- /.preloader -->
+
+
+    <!-- search-box-layout -->
+    <div class="wraper_flyout_search">
+        <div class="table">
+            <div class="table-cell">
+                <div class="flyout-search-layer"></div>
+                <div class="flyout-search-layer"></div>
+                <div class="flyout-search-layer"></div>
+                <div class="flyout-search-close">
+                    <span class="flyout-search-close-line"></span>
+                    <span class="flyout-search-close-line"></span>
+                </div>
+                <div class="flyout_search">
+                    <div class="flyout-search-title">
+                        <h4>Search</h4>
+                    </div>
+                    <div class="flyout-search-bar">
+                        <form role="search" method="get" action="#">
+                            <div class="form-row">
+                                <input type="search" placeholder="Type to search..." value="" name="s" required="">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- search-box-layout end -->
+
+
+    {% include 'web/partials/header.html' %}
+
+    {% block content %}
+    {% endblock %}
+   
+
+
+    {% include 'web/partials/footer.html' %}
+
+
+    <!-- album popup -->
+    <div id="album-popup" class="album-popup">
+        <div class="close-album"><i class="fas fa-times"></i></div>
+        <div class="album-inner">
+            <div class="container">
+                <div class="inner-box">
+                    <div class="title-box centred">
+                        <h1>Album Title</h1>
+                        <span>nature, portrait, wedding</span>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                    </div>
+                    <div class="photo-album">
+                        <figure class="image"><img src="{% static 'web/images/resource/album-image-1.jpg' %}" alt=""></figure>
+                        <figure class="image"><img src="{% static 'web/images/resource/album-image-2.jpg' %}" alt=""></figure>
+                        <figure class="image"><img src="{% static 'web/images/resource/album-image-3.jpg' %}" alt=""></figure>
+                        <figure class="image"><img src="{% static 'web/images/resource/album-image-4.jpg' %}" alt=""></figure>
+                        <figure class="image"><img src="{% static 'web/images/resource/album-image-5.jpg' %}" alt=""></figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- album popup -->
+
+
+
+<!--Scroll to top-->
+<button class="scroll-top scroll-to-target" data-target="html">
+    <span class="fas fa-angle-up"></span>
+</button>
+
+
+
+<!-- jequery plugins -->
+<script src="{% static 'web/js/jquery.js' %}"></script>
+<script src="{% static 'web/js/popper.min.js' %}"></script>
+<script src="{% static 'web/js/bootstrap.min.js' %}"></script>
+
+<script src="{% static 'web/js/owl.js' %}"></script>
+<script src="{% static 'web/js/wow.js' %}"></script>
+<script src="{% static 'web/js/validation.js' %}"></script>
+<script src="{% static 'web/js/jquery.fancybox.js' %}"></script>
+<script src="{% static 'web/js/appear.js' %}"></script>
+<script src="{% static 'web/js/isotope.js' %}"></script>
+<script src="{% static 'web/js/jquery.countTo.js' %}"></script>
+
+<!-- main-js -->
+<script src="{% static 'web/js/script.js' %}"></script>
+
+</body><!-- End of .page_wrapper -->
+</html>
