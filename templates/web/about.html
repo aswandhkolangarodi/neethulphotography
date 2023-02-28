@@ -1,0 +1,188 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block title %} ABOUT {% endblock %}
+
+
+{% block content %}
+ <!--Page Title-->
+ <section class="page-title centred" style="background-image: url({% static 'web/images/background/page-title-bg.jpg' %});">
+    <div class="container">
+        <div class="content-box">
+            <h1>About me</h1>
+            <ul class="bread-crumb clearfix">
+                <li><a href="{% url 'web:index' %}">Home</a></li>
+                <li>About Me</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--End Page Title-->
+
+
+<!-- about-section -->
+<section class="about-section about-page">
+    <div class="container">
+        <div class="sec-title centred">
+            <h3>I'm Mari jons, a Professional photographer.<br />My passion is taking photos of the most stunning<br />architecture around the world.</h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+                <div class="image-box">
+                    <figure class="image"><img src="{% static 'web/images/resource/about-1.jpg' %}" alt=""></figure>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                <div class="content-box">
+                    <div class="text">
+                        <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal</p>
+                        <p>which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will </p>
+                    </div>
+                    <div class="authore">
+                        <figure class="signature"><img src="{% static 'web/images/resource/signature.png' %}" alt=""></figure>
+                        <h5 class="name">Mari jons</h5>
+                    </div>
+                    <div class="progress-content">
+                        <div class="single-progress-box">
+                            <h6>Photoshop</h6>
+                            <div class="progress" data-value="90">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="value-holder"><span class="value"></span>%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-progress-box">
+                            <h6>Final Cut</h6>
+                            <div class="progress" data-value="75">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="value-holder"><span class="value"></span>%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-progress-box">
+                            <h6>Studio Photography</h6>
+                            <div class="progress" data-value="80">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="value-holder"><span class="value"></span>%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-progress-box">
+                            <h6>Motion Video</h6>
+                            <div class="progress" data-value="60">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="value-holder"><span class="value"></span>%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- about-section end -->
+
+
+<!-- fact-counter -->
+<section class="fact-counter centred" style="background-image: url({% static 'web/images/background/counter-bg.jpg' %});">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 counter-block">
+                <div class="counter-block-one">
+                    <div class="count-outer count-box">
+                        <span class="count-text" data-speed="1500" data-stop="196"></span>
+                    </div>
+                    <div class="text">Creative work</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 counter-block">
+                <div class="counter-block-one">
+                    <div class="count-outer count-box">
+                        <span class="count-text" data-speed="1500" data-stop="194"></span>
+                    </div>
+                    <div class="text">Satisfied Clients</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 counter-block">
+                <div class="counter-block-one">
+                    <div class="count-outer count-box">
+                        <span class="count-text" data-speed="1500" data-stop="165"></span>
+                    </div>
+                    <div class="text">Working Days</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 counter-block">
+                <div class="counter-block-one">
+                    <div class="count-outer count-box">
+                        <span class="count-text" data-speed="1500" data-stop="99"></span>
+                    </div>
+                    <div class="text">Cup of Coffe</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- fact-counter end -->
+
+
+<!-- service-section -->
+<section class="service-section">
+    <div class="container">
+        <div class="sec-title centred">
+            <h4>Services</h4>
+            <h3>My Specialties</h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                <div class="inner-box">
+                    <figure class="image-box"><img src="{% static 'web/images/resource/service-1.jpg' %}" alt=""></figure>
+                    <div class="content-box">
+                        <h5><a href="#">Commercial Photography</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                <div class="inner-box">
+                    <figure class="image-box"><img src="{% static 'web/images/resource/service-2.jpg' %}" alt=""></figure>
+                    <div class="content-box">
+                        <h5><a href="#">Fashion Photography</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                <div class="inner-box">
+                    <figure class="image-box"><img src="{% static 'web/images/resource/service-3.jpg' %}" alt=""></figure>
+                    <div class="content-box">
+                        <h5><a href="#">Wedding & portrait Photography</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                <div class="inner-box">
+                    <figure class="image-box"><img src="{% static 'web/images/resource/service-4.jpg' %}" alt=""></figure>
+                    <div class="content-box">
+                        <h5><a href="#">Celebrity Photography</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                <div class="inner-box">
+                    <figure class="image-box"><img src="{% static 'web/images/resource/service-5.jpg' %}" alt=""></figure>
+                    <div class="content-box">
+                        <h5><a href="#">Underwater Photography</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                <div class="inner-box">
+                    <figure class="image-box"><img src="{% static 'web/images/resource/service-6.jpg' %}" alt=""></figure>
+                    <div class="content-box">
+                        <h5><a href="#">Wildlife Photography</a></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- service-section end -->
+{% endblock %}

@@ -6,7 +6,7 @@
         <div class="outer-container">
             <div class="main-box">
                 <div class="logo-box">
-                    <figure class="logo"><a href="index.html"><img src="{% static 'web/images/logo.png' %}" alt=""></a></figure>
+                    <figure class="logo"><a href="{% url 'web:index' %}"><img src="{% static 'web/images/logo.png' %}" alt=""></a></figure>
                 </div>
                 <div class="nav-outer clearfix">
                     <div class="menu-area">
@@ -21,41 +21,11 @@
                             </div>
                             <div class="navbar-collapse collapse clearfix">
                                 <ul class="navigation clearfix">
-                                    <li class="current dropdown"><a href="#">Home</a>
-                                        <ul>
-                                            <li><a href="index.html">Home Page 01</a></li>
-                                            <li><a href="index-2.html">Home Page 02</a></li>
-                                            <li><a href="index-3.html">Home Page 03</a></li>
-                                            <li><a href="index-4.html">Home Page 04</a></li>
-                                            <li><a href="index-5.html">Home Page 05</a></li>
-                                            <li><a href="index-6.html">Home Page 06</a></li>
-                                            <li class="dropdown"><a href="#">Header Styles</a>
-                                            <ul>
-                                                <li><a href="index.html">Header Style 01</a></li>
-                                                <li><a href="index-2.html">Header Style 02</a></li>
-                                                <li><a href="index-3.html">Header Style 03</a></li>
-                                                <li><a href="index-4.html">Header Style 04</a></li>
-                                                <li><a href="index-5.html">Header Style 05</a></li>
-                                                <li><a href="index-6.html">Header Style 06</a></li>
-                                            </ul>
-                                        </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="about.html">About</a></li>
-                                    <li class="dropdown"><a href="#">Portfolio</a>
-                                        <ul>
-                                            <li><a href="portfolio.html">Portfolio Type 01</a></li>
-                                            <li><a href="portfolio-2.html">Portfolio Type 02</a></li>
-                                            <li><a href="portfolio-single.html">Portfolio Single</a></li>
-                                        </ul>
-                                    </li> 
-                                    <li class="dropdown"><a href="#">Pages</a>
-                                        <ul>
-                                            <li><a href="service.html">Our Services</a></li>
-                                            <li><a href="testimonial.html">Our Testimonial</a></li>
-                                            <li><a href="clients-page.html">Clients Page</a></li>
-                                            <li><a href="error.html">Error Page</a></li>
-                                        </ul>
+                                    <li class="{% if is_index %}current{% endif %}"><a href="{% url 'web:index' %}">Home</a></li>
+                                    <li class="{% if is_about %} current {% endif %}"><a href="{% url 'web:about' %}">About</a></li>
+                                    <li class="{% if is_services %} current {% endif %}"><a href="{% url 'web:services' %}">Services</a></li>
+                                    <li class="{% if is_projects %} current {% endif %}"><a href="{% url 'web:projects' %}">Projects</a>
+                                       
                                     </li>
                                     <li class="dropdown"><a href="#">Blog</a>
                                         <ul>
@@ -91,7 +61,7 @@
     <!--Sticky Header-->
     <div class="sticky-header">
         <div class="container clearfix">
-            <figure class="logo-box"><a href="index.html"><img src="{% static 'web/images/small-logo.png' %}" alt=""></a></figure>
+            <figure class="logo-box"><a href="{% url 'web:index' %}"><img src="{% static 'web/images/small-logo.png' %}" alt=""></a></figure>
             <div class="menu-area">
                 <nav class="main-menu navbar-expand-lg">
                     <div class="navbar-header">
@@ -104,27 +74,9 @@
                     </div>
                     <div class="navbar-collapse collapse clearfix">
                         <ul class="navigation clearfix">
-                            <li class="current dropdown"><a href="#">Home</a>
-                                <ul>
-                                    <li><a href="index.html">Home Page 01</a></li>
-                                    <li><a href="index-2.html">Home Page 02</a></li>
-                                    <li><a href="index-3.html">Home Page 03</a></li>
-                                    <li><a href="index-4.html">Home Page 04</a></li>
-                                    <li><a href="index-5.html">Home Page 05</a></li>
-                                    <li><a href="index-6.html">Home Page 06</a></li>
-                                    <li class="dropdown"><a href="#">Header Styles</a>
-                                    <ul>
-                                        <li><a href="index.html">Header Style 01</a></li>
-                                        <li><a href="index-2.html">Header Style 02</a></li>
-                                        <li><a href="index-3.html">Header Style 03</a></li>
-                                        <li><a href="index-4.html">Header Style 04</a></li>
-                                        <li><a href="index-5.html">Header Style 05</a></li>
-                                        <li><a href="index-6.html">Header Style 06</a></li>
-                                    </ul>
-                                </li>
-                                </ul>
-                            </li>
-                            <li><a href="about.html">About</a></li>
+                            <li class=" {% if is_index %} current {% endif %} "><a href="{% url 'web:index' %}">Home</a> </li>
+                            <li class="{% if is_about %} current {% endif %}"><a href="{% url 'web:about' %}">About</a></li>
+                            <li class="{% if is_about %} current {% endif %}"><a href="#">Services</a></li>
                             <li class="dropdown"><a href="#">Portfolio</a>
                                 <ul>
                                     <li><a href="portfolio.html">Portfolio Type 01</a></li>
@@ -132,13 +84,8 @@
                                     <li><a href="portfolio-single.html">Portfolio Single</a></li>
                                 </ul>
                             </li> 
-                            <li class="dropdown"><a href="#">Pages</a>
-                                <ul>
-                                    <li><a href="service.html">Our Services</a></li>
-                                    <li><a href="testimonial.html">Our Testimonial</a></li>
-                                    <li><a href="clients-page.html">Clients Page</a></li>
-                                    <li><a href="error.html">Error Page</a></li>
-                                </ul>
+                            <li class="{% if is_projects %} current {% endif %}"><a href="{% url 'web:projects' %}">Projects</a>
+                                
                             </li>
                             <li class="dropdown"><a href="#">Blog</a>
                                 <ul>

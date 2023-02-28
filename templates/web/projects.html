@@ -1,0 +1,87 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block title %} PROJECTS {% endblock %}
+
+{% block content %}
+
+ <!--Page Title-->
+ <section class="page-title centred" style="background-image: url({% static 'web/images/background/page-title-bg.jpg' %});">
+    <div class="container">
+        <div class="content-box">
+            <h1>My Projects</h1>
+            <ul class="bread-crumb clearfix">
+                <li><a href="{% url 'web:index' %}">Home</a></li>
+               
+                <li>My Projects</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--End Page Title-->
+
+
+<!-- service-section -->
+<section class="service-section service-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                <div class="inner-box">
+                    <figure class="image-box"><img src="{% static 'web/images/resource/service-1.jpg' %}" alt=""></figure>
+                    <div class="content-box">
+                        <h5><a href="#">Commercial Photography</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                <div class="inner-box">
+                    <figure class="image-box"><img src="{% static 'web/images/resource/service-2.jpg' %}" alt=""></figure>
+                    <div class="content-box">
+                        <h5><a href="#">Fashion Photography</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                <div class="inner-box">
+                    <figure class="image-box"><img src="{% static 'web/images/resource/service-3.jpg' %}" alt=""></figure>
+                    <div class="content-box">
+                        <h5><a href="#">Wedding & portrait Photography</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                <div class="inner-box">
+                    <figure class="image-box"><img src="{% static 'web/images/resource/service-4.jpg' %}" alt=""></figure>
+                    <div class="content-box">
+                        <h5><a href="#">Celebrity Photography</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                <div class="inner-box">
+                    <figure class="image-box"><img src="{% static 'web/images/resource/service-5.jpg' %}" alt=""></figure>
+                    <div class="content-box">
+                        <h5><a href="#">Underwater Photography</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                <div class="inner-box">
+                    <figure class="image-box"><img src="{% static 'web/images/resource/service-6.jpg' %}" alt=""></figure>
+                    <div class="content-box">
+                        <h5><a href="#">Wildlife Photography</a></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="load-more-btn centred"><a href="#">Load more</a></div>
+    </div>
+</section>
+<!-- service-section end -->
+
+
+
+
+{% endblock %}
+
+
+                                    

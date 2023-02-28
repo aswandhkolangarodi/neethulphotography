@@ -1,0 +1,95 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block title %} PROJECTS {% endblock %}
+
+{% block content %}
+
+ <!--Page Title-->
+ <section class="page-title centred" style="background-image: url({% static 'web/images/background/page-title-bg.jpg' %});">
+    <div class="container">
+        <div class="content-box">
+            <h1>Services</h1>
+            <ul class="bread-crumb clearfix">
+                <li><a href="{% url 'web:index' %}">Home</a></li>
+               
+                <li>Services</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--End Page Title-->
+
+
+ <!-- others-gallery -->
+ <section class="others-gallery service-page">
+    <div class="container-fluid">
+        <div class="sec-title-two centred">
+            <h4>Portfolio</h4>
+            <h3>My Latest Photography</h3>
+        </div>
+        <div class="inner-content">
+            <div class="three-column-carousel owl-carousel owl-theme">
+                <div class="inner-box">
+                    <figure class="image"><img src="{% static 'web/images/gallery/other-gallery-1.jpg' %}" alt=""></figure>
+                    <div class="content-box">
+                        <h3>Album Title</h3>
+                        <ul class="categories-list">
+                            <li><a href="#">nature</a>,</li>
+                            <li><a href="#">portrait</a>,</li>
+                            <li><a href="#">wedding</a></li>
+                        </ul>
+                        <div class="album-link">
+                            <a href="#">
+                                <span>8</span>
+                                <i class="flaticon-images"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-box">
+                    <figure class="image"><img src="{% static 'web/images/gallery/other-gallery-2.jpg' %}" alt=""></figure>
+                    <div class="content-box">
+                        <h3>Album Title</h3>
+                        <ul class="categories-list">
+                            <li><a href="#">nature</a>,</li>
+                            <li><a href="#">portrait</a>,</li>
+                            <li><a href="#">wedding</a></li>
+                        </ul>
+                        <div class="album-link">
+                            <a href="#">
+                                <span>6</span>
+                                <i class="flaticon-images"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-box">
+                    <figure class="image"><img src="{% static 'web/images/gallery/other-gallery-3.jpg' %}" alt=""></figure>
+                    <div class="content-box">
+                        <h3>Album Title</h3>
+                        <ul class="categories-list">
+                            <li><a href="#">nature</a>,</li>
+                            <li><a href="#">portrait</a>,</li>
+                            <li><a href="#">wedding</a></li>
+                        </ul>
+                        <div class="album-link">
+                            <a href="#">
+                                <span>9</span>
+                                <i class="flaticon-images"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- others-gallery end -->
+
+
+
+
+{% endblock %}
+
+
+                                    

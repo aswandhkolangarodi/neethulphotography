@@ -6,5 +6,9 @@ from django.views.generic import TemplateView
 app_name = "web"
 
 urlpatterns = [
-    path("", views.base, name="base"),
+    path("base", views.base, name="base"),
+    path("", views.index, name="index"),
+    path("about/", views.about, name="about"),
+    path("projects/", views.projects, name="projects"),
+    path("services/", views.services, name="services"),
 ]
